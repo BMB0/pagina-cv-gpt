@@ -27,6 +27,53 @@
             padding: 20px 0;
             text-align: center;
         }
+        /* Estilos para el tema oscuro */
+        body.dark-mode {
+            background-color: #222;
+            color: #fff;
+        }
+
+        body.dark-mode .navbar-dark .navbar-nav .nav-link {
+            color: #fff;
+        }
+
+        body.dark-mode .navbar-dark .navbar-toggler-icon {
+            background-color: #fff;
+        }
+
+        body.dark-mode .navbar-dark .navbar-toggler-icon:hover {
+            background-color: #ccc;
+        }
+
+        body.dark-mode .btn-dark {
+            background-color: #333;
+            border-color: #fff;
+            color: #fff;
+        }
+
+        /* Estilos para el tema claro */
+        body.light-mode {
+            background-color: #fff;
+            color: #333;
+        }
+
+        body.light-mode .navbar-light .navbar-nav .nav-link {
+            color: #333;
+        }
+
+        body.light-mode .navbar-light .navbar-toggler-icon {
+            background-color: #333;
+        }
+
+        body.light-mode .navbar-light .navbar-toggler-icon:hover {
+            background-color: #ccc;
+        }
+
+        body.light-mode .btn-light {
+            background-color: #fff;
+            border-color: #333;
+            color: #333;
+        }
     </style>
 </head>
 
@@ -48,9 +95,25 @@
                     <li class="nav-item"><a class="nav-link" href="#services">Servicios</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
                 </ul>
+                <button class="btn btn-dark" id="themeToggleBtn">Tema Oscuro</button>
             </div>
         </div>
     </nav>
+
+    <!-- JavaScript para cambiar el tema -->
+    <script>
+        const themeToggleBtn = document.getElementById('themeToggleBtn');
+        const body = document.body;
+
+        themeToggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                themeToggleBtn.innerText = 'Tema Claro';
+            } else {
+                themeToggleBtn.innerText = 'Tema Oscuro';
+            }
+        });
+    </script>
 
     <!-- Acerca de mí -->
     <section id="about" class="py-5">
@@ -59,7 +122,7 @@
             <div class="row about-section">
                 <!-- Columna izquierda -->
                 <div class="col-lg-6">
-                    <h3>Franz Beltrán</h3>
+                    <h3>Bruno Marquez</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque bibendum sapien at massa
                         convallis, non congue nisl tincidunt. Aliquam erat volutpat. Integer vel dapibus
                         tortor. Nulla facilisi. Suspendisse potenti. Vivamus eget risus nunc. In hac habitasse platea
@@ -67,14 +130,14 @@
                 </div>
                 <!-- Columna derecha -->
                 <div class="col-lg-6">
-                    <img src="me.png" alt="Mi Foto">
+                    <img src="assets/me.png" alt="Mi Foto">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Habilidades -->
-    <section id="skills" class="py-5 bg-light">
+    <section id="skills" class="py-5">
         <div class="container text-center">
             <h2>Habilidades</h2>
             <!-- Primera fila -->
@@ -203,7 +266,7 @@
     </section>
 
     <!-- Servicios -->
-    <section id="services" class="py-5 bg-light">
+    <section id="services" class="py-5">
         <div class="container text-center">
             <h2>Servicios</h2>
             <!-- Primera fila de Servicios -->
@@ -321,7 +384,7 @@
     <!-- Footer -->
     <footer class="bg-dark text-white py-3">
         <div class="container text-center">
-            <p>&copy; 2024 Franz Beltrán - Todos los derechos reservados</p>
+            <p>&copy; 2024 Bruno Marquez - Todos los derechos reservados</p>
         </div>
     </footer>
 
