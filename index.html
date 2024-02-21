@@ -8,6 +8,53 @@
     <!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        /* Nueva paleta de colores */
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --background-color: #ecf0f1;
+            --text-color: #333;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .navbar-dark {
+            background-color: var(--primary-color);
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: var(--background-color);
+        }
+
+        .btn-dark {
+            background-color: var(--secondary-color);
+            border-color: var(--background-color);
+            color: var(--background-color);
+        }
+
+        /* Nueva tipografía */
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Espaciado */
+        .container {
+            padding: 2rem;
+        }
+
+        /* Imágenes */
+        .about-section img {
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border: 2px solid var(--secondary-color);
+            border-radius: 50px;
+        }
         /* Estilos adicionales */
         .about-section {
             display: flex;
@@ -16,13 +63,8 @@
             text-align: center;
         }
 
-        .about-section img {
-            max-width: 100%;
-            height: auto;
-        }
-
         footer {
-            background-color: #333;
+            background-color: var(--secondary-color);
             color: #fff;
             padding: 20px 0;
             text-align: center;
@@ -123,10 +165,7 @@
                 <!-- Columna izquierda -->
                 <div class="col-lg-6">
                     <h3>Bruno Marquez</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque bibendum sapien at massa
-                        convallis, non congue nisl tincidunt. Aliquam erat volutpat. Integer vel dapibus
-                        tortor. Nulla facilisi. Suspendisse potenti. Vivamus eget risus nunc. In hac habitasse platea
-                        dictumst. Ut tincidunt quam ut quam tincidunt, nec feugiat quam aliquet.</p>
+                    <p>Estudiante de la carrera de Ingenieria de Sistemas en la Universidad Catolica Boliviana "San Pablo".</p>
                 </div>
                 <!-- Columna derecha -->
                 <div class="col-lg-6">
@@ -184,20 +223,20 @@
             <div class="row my-4">
                 <div class="col-lg-4">
                     <img src="assets/portafolio1.jpg" alt="Proyecto 1" class="img-fluid">
-                    <h4>Proyecto 1</h4>
-                    <p>Lorem ipsum dolor sit amet.</p>
+                    <h4>TDD LAB</h4>
+                    <p>Analisis de codigo para el aprendizaje de la metodologia de desarrollo agil TDD desarrollada en Typescript y React.</p>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal1">Ver</button>
                 </div>
                 <div class="col-lg-4">
                     <img src="assets/portafolio2.jpg" alt="Proyecto 2" class="img-fluid">
-                    <h4>Proyecto 2</h4>
-                    <p>Lorem ipsum dolor sit amet.</p>
+                    <h4>Mis Recetas</h4>
+                    <p>Aplicacion de recetas desarrollada en Flutter.</p>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal2">Ver</button>
                 </div>
                 <div class="col-lg-4">
                     <img src="assets/portafolio3.jpg" alt="Proyecto 3" class="img-fluid">
-                    <h4>Proyecto 3</h4>
-                    <p>Lorem ipsum dolor sit amet.</p>
+                    <h4>Sistema de recomendación de libros</h4>
+                    <p>Sistema desarrollado usando python y machine learning</p>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal3">Ver</button>
                 </div>
             </div>
